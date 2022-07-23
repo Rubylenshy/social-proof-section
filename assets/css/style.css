@@ -97,14 +97,15 @@ body{
 .star-bucks{
     display: flex;
     width: 390px;
-    height: 40px;
-    padding: 10px 10px 10px 20px;
+    height: 50px;
+    padding: 15px 10px 10px 20px;
     margin: 20px 20px 20px 50px;
     border-radius: 5px;
     background-color: rgba(180, 174, 180, 0.2);
 }
-.star-bucks h4{
+.star-bucks h2{
     font-weight: bold;
+    font-size: 18px;
     color: hsl(300, 43%, 22%);
 }
 .star1{
@@ -152,6 +153,7 @@ body{
 }
 .b div .name{
     margin: 5px 0 0 15px;
+    flex-direction: column;
 }
 .name span{
     color: hsl(333, 80%, 67%);
