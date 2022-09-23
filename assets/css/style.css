@@ -1,151 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Poppins&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
 html{
-    background-image: url(../images/bg-pattern-top-desktop.svg);
-    background-repeat: no-repeat;
     font-family: 'League Spartan', sans-serif;
+    background-image: url(../images/bg-pattern-top-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 body{
-    padding: 60px 120px 0;
+    margin: 15% 0;
 }
+
+
 .head-ratings{
     display: flex;
-}
-@media (max-width: 600px) {
-    html{
-        margin: 15% 0 !important;
-        padding: 0 !important;
-        background-image: url(../images/bg-pattern-top-mobile.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    body{
-        padding: 0 5px !important;
-    }
-    .head-ratings{
-        flex-direction: column;
-        text-align: center;
-    }
-    .head{
-        width: 90% !important;
-    }
-    .head h1{
-        width: 80% !important;
-        margin: 0 auto !important;
-        font-size: 25pt !important;
-    }
-    .head p{
-        color: rgb(172, 158, 171);
-        margin: 25px auto 15px !important;
-    }
-    .ratings{
-        width: 90% !important;
-        margin: 10px 0 !important;
-    }
-    .img{
-        margin-bottom: 5px;
-    }
-    .star-bucks{
-        width: 100% !important;
-        height: 65px !important;
-        margin: 15px auto !important;
-        border-radius: 10px;
-        padding: 10px !important;
-        display: grid !important;
-        align-items: center;
-        text-align: center;
-    }
-    .star1{
-        margin: 10px 5% !important;
-    }
-    .star2{
-        margin: 10px 5% !important;
-    }
-    .star3{
-        margin: 10px 5% !important;
-    }
-    .buyers{
-        flex-direction: column;
-        margin: 10px 0 !important;
-    }
-    .b{
-        width: 90% !important;
-        margin: 10px auto !important;
-    }
+    flex-direction: column;
+    text-align: center;
 }
 .head{
-    width: 34%;
-    margin: 0 20% 0 20px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .head h1{
-    color: hsl(300, 43%, 22%);
-    font-size: 35pt;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.25em;
 }
 .head p{
-    color: rgb(158, 172, 169);
-    font-size: 12pt;
-    margin-top: 25px;
-    line-height: 1.4em;
+    color: rgb(172, 158, 171);
+    margin: 25px auto 15px;
+    padding: 0 15px;
 }
 .ratings{
-    width: 40%;
-    display: flex; flex-direction:column; justify-content: space-evenly;
+    width: 90%;
+    display: flex; 
+    flex-direction: column;
+    margin: 10px auto;
 }
 .star-bucks{
+    width: 100%;
     display: flex;
-    width: 390px;
-    height: 50px;
-    padding: 15px 10px 10px 20px;
-    margin: 20px 20px 20px 50px;
+    flex-direction: column;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
     border-radius: 5px;
     background-color: rgba(180, 174, 180, 0.2);
+}
+.star-bucks .img img{
+    height: 15px;
 }
 .star-bucks h2{
     font-weight: bold;
     font-size: 18px;
     color: hsl(300, 43%, 22%);
 }
-.star1{
-    margin-left: -10px;
-}
-.star2{
-    margin-left: 20px;
-}
 .img{
-    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.img img{
+    animation: bounce 1s;
 }
 .buyers{
-    display: flex;
-    margin: 10px auto 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
 }
-.buyer-card{
-    width: 29%;
+.b{
+    width: 90%;
     padding: 30px;
-    margin: 30px auto;
+    margin: 15px auto;
     border-radius: 10px;
     background-color: hsl(300, 43%, 22%);
     color: white;
 }
-.buyer-card2{
-    width: 29%;
-    padding: 30px;
-    margin: 45px auto 10px;
-    border-radius: 10px;
-    background-color: hsl(300, 43%, 22%);
-    color: white;
-}
-.buyer-card3{
-    width: 29%;
-    padding: 30px;
-    margin: 60px auto 10px;
-    border-radius: 10px;
-    background-color: hsl(300, 43%, 22%);
-    color: white;
-}
+
 .b div{
     display: flex;
 }
@@ -165,4 +99,106 @@ body{
 .b p{
     margin: 15px 0 0;
     line-height: 1.2em;
+}
+
+
+@media (min-width: 851px) {
+    body{
+        margin: 60px 0 0;
+    }
+    main{
+        padding: 0 40px;
+    }
+    .head-ratings{
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto 40px;
+    }
+    .head{
+        margin: 0 0 0 20px;
+        text-align: left;
+    }
+    .head h1{
+        margin: 0;
+        font-size: 3.15em;
+    }
+    .head p{
+        padding: 0;
+    }
+    .buyers{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .ratings{
+        width: auto;
+        justify-content: right;
+        margin: 0 20px 0 0;
+    }
+    .star-bucks{
+        flex-direction: row;
+        max-width: 430px;
+        padding: 10px 20px;
+    }
+    .star-bucks:nth-child(1){
+        margin-left: -20%;
+    }
+    .star-bucks:nth-child(2){
+        margin-left: -10%;
+    }
+    .img{
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 852px) and (max-width: 950px) {
+    .head-ratings{
+        display: flex;
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .head{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .star-bucks{
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto !important;
+        border-radius: 5px;
+        background-color: rgba(180, 174, 180, 0.2);
+    }
+}
+@media (min-width: 501px) {
+    .head h1{
+        font-size: 3.15em;
+    }
+}
+.img img:nth-child(1){
+    animation-delay: 2.2s;
+}
+.img img:nth-child(2){
+    animation-delay: 2.4s;
+}
+.img img:nth-child(3){
+    animation-delay: 2.6s;
+}
+.img img:nth-child(4){
+    animation-delay: 2.8s;
+}
+.img img:nth-child(5){
+    animation-delay: 3s;
+}
+@keyframes bounce {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
