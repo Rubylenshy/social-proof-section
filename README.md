@@ -13,10 +13,6 @@ Thanks for checking out this front-end coding challenge.
 - CSS Grid
 - ❤️ Reuben
 
-### I learnt
-
-- CSS background-clip
-
 ### Links
 
 - Live Site URL: [Social Proof Section](https://rubylenshy.github.io/social-proof-section/)
